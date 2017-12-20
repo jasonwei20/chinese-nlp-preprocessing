@@ -12,7 +12,7 @@ Do the following:
 
 4. Run `python delete_low_freq_words.py`. This reads in `bad_words` and deletes lines that contain any of them. Effectively, we reduced our vocabulary size by 50%. The input is the txt files `/no_names_data` and the output is txt files in `/filtered_data`. This probably has terrible runtime, worse than step 1. Took ~140 seconds to process 24 MB of data on one file, which translates to roughly 1.5 hours to process one gigabyte of data, but will probably be slower with a larger vocabulary.
 
-So the final processed data is in the folder `/filtered_data`.
+So the final processed txt files are in the folder `/filtered_data`.
 
 Total run time: terrible, but should be able to process 10 GB of data in a day or two if I had to guess.
 
