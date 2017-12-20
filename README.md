@@ -10,8 +10,10 @@ Do the following:
 
 3. Run `python frequency_distribution.py` (slight modification of https://github.com/johnsonice/Chatbot_hred/blob/master/seq2seq/data_util/combine_datas.py) to generate a frequency distribution of the words and word groups. In particular, we are interested in `bad_words`, the set of words with less than median frequency. This reads in the txt files in `/no_names_data` and outputs `/processed2/vocab.p`.
 
-4. Run `python delete_low_freq_words.py`. This reads in `bad_words` and deletes lines that contain any of them. Effectively, we reduced our vocabulary size by 50%. The input is the txt files `/no_names_data` and the output is txt files in `/filtered_data`.
+4. Run `python delete_low_freq_words.py`. This reads in `bad_words` and deletes lines that contain any of them. Effectively, we reduced our vocabulary size by 50%. The input is the txt files `/no_names_data` and the output is txt files in `/filtered_data`. This probably has terrible runtime, worse than step 1. Took ~140 seconds to process 24 MB of data on one file, which translates to roughly 1.5 hours to process one gigabyte of data, but will probably be slower with a larger vocabulary.
 
 So the final processed data is in the folder `/filtered_data`.
+
+Total run time: terrible, but should be able to process 10 GB of data in a day or two if I had to guess.
 
 Lots of code from https://github.com/johnsonice/Chatbot_hred.
