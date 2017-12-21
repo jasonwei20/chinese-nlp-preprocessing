@@ -25,7 +25,7 @@ ENCODING = 'utf-8'
 jieba.load_userdict(USER_DICT)
 
 DELETE = ['\[.*?\]','\u200b']
-MULTI = False
+MULTI = True
 
 #%%
 def replace_tokens(text,replace_dict=None):
