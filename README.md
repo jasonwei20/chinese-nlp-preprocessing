@@ -14,6 +14,8 @@ Do the following:
 
 So the final processed txt files are in the folder `/filtered_data`.
 
+To run all lines of code, run `python replace_person_names_multiprocessing.py; python weibo.py; python frequency_distribution.py; python delete_low_freq_words.py`
+
 Total run time: terrible, but should be able to process 10 GB of data in a day or two if I had to guess.
 
 Lots of code from https://github.com/johnsonice/Chatbot_hred.
