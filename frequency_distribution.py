@@ -68,7 +68,7 @@ def build_vocab(pickle_file_path, CODES):
     vocab_to_int = {word: ii for ii, word in enumerate(vocab, len(CODES))}
     vocab_to_int = dict(vocab_to_int, **CODES)
     int_to_vocab = {v_i: v for v, v_i in vocab_to_int.items()}
-    middle_word = int_to_vocab[len(int_to_vocab)/2]
+    middle_word = int_to_vocab[int(len(int_to_vocab)/2)]
     one_half_threshold = all_words[middle_word]
     print("Frequency of the middle word:", one_half_threshold)
 
