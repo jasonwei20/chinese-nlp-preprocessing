@@ -14,6 +14,8 @@ Do the following:
 
 5. Run `python delete_low_freq_words.py`. This reads in `bad_words` and deletes lines that contain any of them. Effectively, we reduced our vocabulary size by 50%. The input is the txt files `/no_names_data` and the output is txt files in `/filtered_data`. This probably has terrible runtime, worse than step 2. Took ~140 seconds to process 24 MB of data on one file, which translates to roughly 1.5 hours to process one gigabyte of data, but will probably be slower with a larger vocabulary.
 
+6. Run `python create_new_pickle.py`. This reads in all the txt data from `/filtered_data` and outputs `/new_pickle/processed_tokens.p`.
+
 So the final processed txt files are in the folder `/filtered_data`.
 
 To run all lines of code, run `python replace_person_names_multiprocessing.py; python weibo.py; python frequency_distribution.py; python delete_low_freq_words.py`
