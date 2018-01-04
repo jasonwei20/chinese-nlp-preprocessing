@@ -61,19 +61,20 @@ def build_vocab(pickle_file_path, CODES):
 
     all_words = Counter(all_words)
     print("Total vocabulary size:", len(all_words))
-    print("Number of names:", all_words["人名"])
 
     # i want to get rid of half of the words so find the middle word
     vocab = sorted(all_words, key=all_words.get, reverse=True)
     vocab_to_int = {word: ii for ii, word in enumerate(vocab, len(CODES))}
     vocab_to_int = dict(vocab_to_int, **CODES)
     int_to_vocab = {v_i: v for v, v_i in vocab_to_int.items()}
-    middle_word = int_to_vocab[int(len(int_to_vocab)/2)]
+    middle_word = int_to_vocab[int(len(int_to_vocab)/10)]
     one_half_threshold = all_words[middle_word]
     print("Frequency of the middle word:", one_half_threshold)
 
     good_words = {x: all_words[x] for x in all_words if all_words[x] > one_half_threshold} # vocab words that are in the upper half of the frequency distribution
     print("Filtered vocabulary size:", len(good_words))
+
+    print("Frequency of _人名_", all_words["_人名_"])
 
     vocab = sorted(good_words, key=good_words.get, reverse=True)
     vocab_to_int = {word: ii for ii, word in enumerate(vocab, len(CODES))}

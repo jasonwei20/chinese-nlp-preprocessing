@@ -12,6 +12,8 @@ import pickle
 #from collections import Counter
 #import user_replace
 import jieba
+
+jieba.suggest_freq('_人名_', True)
 import re
 from multiprocessing import Pool 
 

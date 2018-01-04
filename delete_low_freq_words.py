@@ -9,6 +9,7 @@ from os.path import isfile, join
 import jieba
 jieba.initialize()
 import jieba.posseg as pseg
+jieba.suggest_freq('_人名_', True)
 import time
 import multiprocessing
 from multiprocessing import Pool
