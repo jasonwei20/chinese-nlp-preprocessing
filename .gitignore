@@ -1,0 +1,6 @@
+# Ignore data folder 
+data/*.txt
+data/xiaohuangji/*.conv
+
+
+
