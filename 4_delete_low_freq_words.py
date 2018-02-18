@@ -19,7 +19,9 @@ pickle_in = open("./processed2/vocab.p","rb")
 vocab_to_int, int_to_vocab, bad_words = pickle.load(pickle_in)
 print("Finish loading bad_words of size:", len(bad_words), "words.")
 
-dirty_words = ["他妈的", "混蛋", "滚", "拉屎", "屁话", "婊子", "王八", "肏你妈", "肏", "笨蛋", "二屄", "傻屄"]
+dirty_words = ["他妈的", "混蛋", "滚", "拉屎", "屁话", "婊子", 
+               "王八", "肏你妈", "肏", "笨蛋", "二屄", "傻屄","鸡",
+               "大爷","你妹"]
 
 # methods
 
